@@ -15,8 +15,8 @@ body {
   justify-content: center;
   /* flex-wrap: wrap; */
   gap: 50px;
-  height: auto;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   background-image: url(./img/about-bg.webp);
   background-size: cover;
   background-position: center;
