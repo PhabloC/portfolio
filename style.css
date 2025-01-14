@@ -1,11 +1,11 @@
 /* Global styles */
 body {
   font-family: "Arial", sans-serif;
-  color: white;
   margin: 0;
   padding: 0;
-  background-color: #121212;
-  overflow: hidden;
+  flex-direction: column;
+  /* background-color: #121212; */
+  /* overflow: hidden; */
 }
 
 /* Container */
@@ -13,9 +13,9 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 50px;
-  height: 100vh;
+  height: auto;
   width: 100vw;
   background-image: url(./img/about-bg.webp);
   background-size: cover;
@@ -30,19 +30,27 @@ body {
 }
 
 .profile-image img {
-  width: 700px;
+  width: 900px;
   z-index: 99999999;
 }
 
 .profile-background {
-  position: absolute;
-  top: 160px;
-  left: 310px;
-  width: 400px;
-  height: 400px;
+  margin-bottom: -480px;
+  margin-left: 230px;
+  width: 500px;
+  height: 500px;
   background: #00d4ff;
   border-radius: 25%;
   z-index: -1;
+}
+
+.description {
+  border-radius: 10px;
+  background-color: rgb(255 255 255 / 9%);
+  border: 1px solid rgb(255 255 255 / 9%);
+  padding: 30px;
+  backdrop-filter: blur(6px);
+  margin-bottom: 20px;
 }
 
 /* Text Content */
@@ -53,6 +61,7 @@ body {
 .text-content h1 {
   font-size: 2.5rem;
   line-height: 1.2;
+  color: #ffffff;
 }
 
 .text-content h1 span {
@@ -123,8 +132,41 @@ body {
   left: 0;
 }
 
+.animated-text {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid black; /* Para simular o cursor */
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  from {
+    border-color: transparent;
+  }
+  to {
+    border-color: black;
+  }
+}
+
 /* Responsive */
-@media (max-width: 768px) {
+@media (max-width: 1800px) {
+  .profile-image img {
+    width: 700px;
+  }
+  .profile-background {
+    margin-bottom: -370px;
+    margin-left: 180px;
+    width: 400px;
+    height: 400px;
+  }
+  .profile-image {
+    z-index: 1;
+    margin-top: 100px;
+    margin-left: 0;
+  }
+}
+/* @media (max-width: 768px) {
   .text-content h1 {
     font-size: 2rem;
   }
@@ -137,4 +179,4 @@ body {
     width: 250px;
     height: 250px;
   }
-}
+} */
